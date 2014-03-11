@@ -16,7 +16,14 @@ StoreFront.config(['$routeProvider', function($routeProvider){
     });
 
     $routeProvider.when('/product/:productId',{
-        templateUrl: '../assets/mainProduct.html',
+        templateUrl: '../assets/mainCreate.html',
         controller: 'ProductCtrl'
     });
+
+    $routeProvider.when('/products/new',{
+        templateUrl: '../assets/mainCreateProduct.html',
+        controller: 'CreateProductCtrl'
+    });
 }]);
+
+

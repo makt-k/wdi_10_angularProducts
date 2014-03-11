@@ -1,0 +1,11 @@
+<h1 class="text-center">Create new product</h1>
+  <form>
+      <label><strong>Name</strong></label>
+      <input ng-model="formData.newProductName" placeholder="New Product Name" type="text">
+      <label><strong>Price</strong></label>
+      <input ng-model="formData.newProductPrice" placeholder="New Product Price">
+      <label><strong>Description</strong></label>
+      <input ng-model="formData.newProductDescription" placeholder="New Product Description">
+      <button ng-click="createPost()">Create</button>
+      <button ng-click="clearPost()">Clear post</button>
+  </form>

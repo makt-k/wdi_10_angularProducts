@@ -1,7 +1,10 @@
 <!-- The "default" product index view.-->
 <h1 class='text-center'>Products</h1>
+<p><a ng-click="navNewProduct()">New Product</a></p>
+<br/>
+<br/>
 <!-- search box, for filtering -->
-<input type='text' ng-model='search.$'>
+Search <input type='text' ng-model='search.$'>
   <!-- List all Products -->
   <div class="product-listing" ng-repeat="product in data.products | filter:search">
     <!-- set a click handler on the "name" of a Product -->
@@ -10,3 +13,4 @@
       <div class="product-info">Price: {{product.price}} </div>
       <div class="product-description">Description: {{product.description}} </div>
   </div>
+

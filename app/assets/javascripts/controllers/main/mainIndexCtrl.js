@@ -10,7 +10,7 @@ var IndexCtrl = function($scope, $location, $http, productData){
     };
 
     $scope.navNewProduct = function(){
-        $location.url('/product/new');
+        $location.url('/products/new');
     };
     return productData;
 };
