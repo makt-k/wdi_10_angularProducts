@@ -1,6 +1,9 @@
-var IndexCtrl = function($scope, $location, $http){
-    $scope.data = productData;
-    productData.loadProducts();
+var IndexCtrl = function($scope, $location, $http, productData){
+    $scope.data = {};
+
+    productData.loadProducts(function(data){
+        $scope.data.products = data.products;
+    });
 
     $scope.viewPost = function(productId){
         $location.url('/product/' + productId);
@@ -9,4 +12,5 @@ var IndexCtrl = function($scope, $location, $http){
     $scope.navNewProduct = function(){
         $location.url('/product/new');
     };
+    return productData;
 };

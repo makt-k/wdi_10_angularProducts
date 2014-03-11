@@ -14,4 +14,9 @@ StoreFront.config(['$routeProvider', function($routeProvider){
         templateUrl: '../assets/mainIndex.html',
         controller: 'IndexCtrl'
     });
+
+    $routeProvider.when('/product/:productId',{
+        templateUrl: '../assets/mainProduct.html',
+        controller: 'ProductCtrl'
+    });
 }]);
