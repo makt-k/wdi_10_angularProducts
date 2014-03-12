@@ -25,6 +25,23 @@ angular.module('StoreFront').factory('productData',['$http', function($http){
             .error(function(){
                 console.log('Failed to load product ' + productId);
             });
-    }; // end of productData method
+    };
+
+    productData.createProduct = function(newProduct){
+        var data = {
+            new_product: {
+                name: newProduct.newProductName,
+                description: newProduct.newProductDescription,
+                price: newProduct.newProductPrice,
+        }};
+     $http.post('./products.json', data).success(function(data) {
+            productData.products.push(data);
+            return console.log(data);
+        }).error(function() {
+            return console.error('Failed to create new post.');
+        });
+        return true;
+    };
+
     return productData;
 }]);

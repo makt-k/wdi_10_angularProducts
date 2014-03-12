@@ -13,5 +13,16 @@ var CreateProductCtrl = function($scope, $location, $http, productData){
     $scope.navNewProduct = function(){
         $location.url('/products/new');
     };
-this.CreatePostCtrl.$inject = ['$scope', '$location', 'productData'];
+
+    $scope.createProduct = function() {
+        console.log($scope.formData);
+        return productData.createProduct($scope.formData);
+    };
+
+  //   $scope.clearProduct = function() {
+  //       $scope.formData.newProductName = '';
+  //       $scope.formData.newProductPrice = '';
+  //       return $scope.formData.newProductDescription = '';
+  // };
+
 };

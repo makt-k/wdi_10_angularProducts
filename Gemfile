@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'angularjs-rails'
 gem 'active_model_serializers'
 gem 'quiet_assets'
+gem 'jquery-rails'
 
 group :doc do
   gem 'sdoc', require: false
