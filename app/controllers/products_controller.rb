@@ -22,6 +22,8 @@ class ProductsController < ApplicationController
     new_product.description = params[:new_product][:description]
     new_product.price = params[:new_product][:price]
 
+    new_product.save!
+
     respond_with(new_product) do |format|
       format.json { render :json => new_product.as_json }
     end
